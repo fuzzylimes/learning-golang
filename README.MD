@@ -1,0 +1,1 @@
+Simple program based on the tutorial here: https://golangbot.com/packages/
