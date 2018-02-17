@@ -51,6 +51,7 @@ func main() {
 	} else if res.StatusCode != 200 {
 		log.Fatal("Non 200 response returned.\n", res.StatusCode)
 	}
+	defer res.Body.Close()
 
 	body, readErr := ioutil.ReadAll(res.Body)
 	if readErr != nil {
