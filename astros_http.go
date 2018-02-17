@@ -48,6 +48,8 @@ func main() {
 	res, getErr := astroClient.Do(req)
 	if getErr != nil {
 		log.Fatal(getErr)
+	} else if res.StatusCode != 200 {
+		log.Fatal("Non 200 response returned.\n", res.StatusCode)
 	}
 
 	body, readErr := ioutil.ReadAll(res.Body)
@@ -66,5 +68,6 @@ func main() {
 	fmt.Println(people1.Number)
 	fmt.Println(people1.Message)
 	fmt.Println(people1.Person[0].Name)
+	fmt.Printf("%T\n", res.Status)
 
 }
