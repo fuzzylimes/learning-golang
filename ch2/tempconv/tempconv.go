@@ -5,10 +5,16 @@ import (
 	"fmt"
 )
 
+// Celsius is for celsius temps
 type Celsius float64
+
+// Fahrenheit is for fahrenheit temps
 type Fahrenheit float64
+
+// Kelvin is for kelvin temps
 type Kelvin float64
 
+// Constant temp values
 const (
 	AbsoluteZero Celsius = -273.15
 	FreezingC    Celsius = 0
