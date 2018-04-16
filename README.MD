@@ -1,0 +1,1 @@
+General repository for small Go projects used while learning Go.
